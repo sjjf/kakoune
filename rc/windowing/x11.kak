@@ -1,11 +1,5 @@
 # x11
 
-hook global KakBegin .* %sh{
-    if [ -n "$DISPLAY" ] && [ -z "$TMUX" ]; then
-        echo "require-module x11"
-    fi
-}
-
 provide-module x11 %{
 
 # termcmd should be set such as the next argument is the whole

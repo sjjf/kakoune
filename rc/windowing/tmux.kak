@@ -1,12 +1,6 @@
 # http://tmux.github.io/
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-hook global KakBegin .* %sh{
-    if [ -n "$TMUX" ]; then
-        echo "require-module tmux"
-    fi
-}
-
 provide-module tmux %{
 
 define-command -hidden -params 2.. tmux-terminal-impl %{

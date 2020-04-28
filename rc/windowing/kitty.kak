@@ -1,10 +1,5 @@
-
-hook -group kitty-hooks global KakBegin .* %sh{
-    if [ "$TERM" = "xterm-kitty" ] && [ -z "$TMUX" ]; then
-        echo "require-module kitty"
-    fi
-}
-
+# https://sw.kovidgoyal.net/kitty/index.html
+# ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 provide-module kitty %{
 
 declare-option -docstring %{window type that kitty creates on new and repl calls (kitty|os)} str kitty_window_type kitty

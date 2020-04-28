@@ -1,14 +1,6 @@
 # https://www.iterm2.com
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-## The default behaviour for the `terminal` command is to open a vertical pane in
-## an iTerm session if not in a tmux session.
-hook global KakBegin .* %sh{
-    if [ "$TERM_PROGRAM" = "iTerm.app" ] && [ -z "$TMUX" ]; then
-        echo "require-module iterm"
-    fi
-}
-
 provide-module iterm %{
 
 define-command -hidden -params 2.. iterm-terminal-split-impl %{

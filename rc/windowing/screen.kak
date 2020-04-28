@@ -1,11 +1,6 @@
 # http://gnu.org/software/screen/
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-hook -group GNUscreen global KakBegin .* %sh{
-    [ -z "${STY}" ] && exit
-    echo "require-module screen"
-}
-
 provide-module screen %{
 
 define-command screen-terminal-impl -hidden -params 3.. %{
